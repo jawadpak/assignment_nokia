@@ -1,0 +1,9 @@
+{
+  "Operation": "Operaatio",
+  "Scope": "Soveltamisala",
+  "Timestamp": "Aikaleima",
+  "Status": "Tila",
+  "Auto refresh": "Automaattinen päivitys",
+  "drop-down-suomi": "Suomi",
+  "drop-down-english": "Englanti"
+}

@@ -1,0 +1,212 @@
+{
+  "data": [
+    {
+      "id": "6130c1be259df2fa0e7d32ee",
+      "isSelected": false,
+      "operation": "BITREX",
+      "scope": "A/B/C",
+      "timestamp": "2016-06-30T05:32:46 -03:00",
+      "status": "Interrupted"
+    },
+    {
+      "id": "6130c1becdeecbcbfad80dbc",
+      "isSelected": false,
+      "operation": "ZBOO",
+      "scope": "A/B/C",
+      "timestamp": "2016-11-18T12:31:15 -02:00",
+      "status": "Failed"
+    },
+    {
+      "id": "6130c1be60951693dec1f06e",
+      "isSelected": false,
+      "operation": "SONIQUE",
+      "scope": "A/B/C",
+      "timestamp": "2019-09-20T04:14:44 -03:00",
+      "status": "Failed"
+    },
+    {
+      "id": "6130c1be2d6ec745d793dcd9",
+      "isSelected": false,
+      "operation": "TRASOLA",
+      "scope": "A/B/C",
+      "timestamp": "2018-04-22T06:20:08 -03:00",
+      "status": "Interrupted"
+    },
+    {
+      "id": "6130c1bece62e79e282a8a3c",
+      "isSelected": false,
+      "operation": "TSUNAMIA",
+      "scope": "A/B/C",
+      "timestamp": "2014-06-21T11:07:22 -03:00",
+      "status": "Failed"
+    },
+    {
+      "id": "6130c1be1026f100bcfcc031",
+      "isSelected": false,
+      "operation": "CENTREGY",
+      "scope": "A/B/C",
+      "timestamp": "2016-10-22T01:34:37 -03:00",
+      "status": "Failed"
+    },
+    {
+      "id": "6130c1bec8fe96ad4385fcfb",
+      "isSelected": false,
+      "operation": "EXOSPACE",
+      "scope": "A/B/C",
+      "timestamp": "2021-02-09T03:37:21 -02:00",
+      "status": "Finished"
+    },
+    {
+      "id": "6130c1bece4c235273936702",
+      "isSelected": false,
+      "operation": "ZYTRAC",
+      "scope": "C/B/A",
+      "timestamp": "2016-03-10T07:29:49 -02:00",
+      "status": "Finished"
+    },
+    {
+      "id": "6130c1be60951693dec1f06e",
+      "isSelected": false,
+      "operation": "SONIQUE",
+      "scope": "A/B/C",
+      "timestamp": "2019-09-20T04:14:44 -03:00",
+      "status": "Failed"
+    },
+    {
+      "id": "6130c1be2d6ec745d793dcd9",
+      "isSelected": false,
+      "operation": "TRASOLA",
+      "scope": "A/B/C",
+      "timestamp": "2018-04-22T06:20:08 -03:00",
+      "status": "Interrupted"
+    },
+    {
+      "id": "6130c1bece62e79e282a8a3c",
+      "isSelected": false,
+      "operation": "TSUNAMIA",
+      "scope": "A/B/C",
+      "timestamp": "2014-06-21T11:07:22 -03:00",
+      "status": "Failed"
+    },
+    {
+      "id": "6130c1be1026f100bcfcc031",
+      "isSelected": false,
+      "operation": "CENTREGY",
+      "scope": "A/B/C",
+      "timestamp": "2016-10-22T01:34:37 -03:00",
+      "status": "Failed"
+    },
+    {
+      "id": "6130c1bec8fe96ad4385fcfb",
+      "isSelected": false,
+      "operation": "EXOSPACE",
+      "scope": "A/B/C",
+      "timestamp": "2021-02-09T03:37:21 -02:00",
+      "status": "Finished"
+    },
+    {
+      "id": "6130c1bece4c235273936702",
+      "isSelected": false,
+      "operation": "ZYTRAC",
+      "scope": "C/B/A",
+      "timestamp": "2016-03-10T07:29:49 -02:00",
+      "status": "Finished"
+    },
+    {
+      "id": "6130c1be60951693dec1f06e",
+      "isSelected": false,
+      "operation": "SONIQUE",
+      "scope": "A/B/C",
+      "timestamp": "2019-09-20T04:14:44 -03:00",
+      "status": "Failed"
+    },
+    {
+      "id": "6130c1be2d6ec745d793dcd9",
+      "isSelected": false,
+      "operation": "TRASOLA",
+      "scope": "A/B/C",
+      "timestamp": "2018-04-22T06:20:08 -03:00",
+      "status": "Interrupted"
+    },
+    {
+      "id": "6130c1bece62e79e282a8a3c",
+      "isSelected": false,
+      "operation": "TSUNAMIA",
+      "scope": "A/B/C",
+      "timestamp": "2014-06-21T11:07:22 -03:00",
+      "status": "Failed"
+    },
+    {
+      "id": "6130c1be1026f100bcfcc031",
+      "isSelected": false,
+      "operation": "CENTREGY",
+      "scope": "A/B/C",
+      "timestamp": "2016-10-22T01:34:37 -03:00",
+      "status": "Failed"
+    },
+    {
+      "id": "6130c1bec8fe96ad4385fcfb",
+      "isSelected": false,
+      "operation": "EXOSPACE",
+      "scope": "A/B/C",
+      "timestamp": "2021-02-09T03:37:21 -02:00",
+      "status": "Finished"
+    },
+    {
+      "id": "6130c1bece4c235273936702",
+      "isSelected": false,
+      "operation": "ZYTRAC",
+      "scope": "C/B/A",
+      "timestamp": "2016-03-10T07:29:49 -02:00",
+      "status": "Finished"
+    },
+    {
+      "id": "6130c1be60951693dec1f06e",
+      "isSelected": false,
+      "operation": "SONIQUE",
+      "scope": "A/B/C",
+      "timestamp": "2019-09-20T04:14:44 -03:00",
+      "status": "Failed"
+    },
+    {
+      "id": "6130c1be2d6ec745d793dcd9",
+      "isSelected": false,
+      "operation": "TRASOLA",
+      "scope": "A/B/C",
+      "timestamp": "2018-04-22T06:20:08 -03:00",
+      "status": "Interrupted"
+    },
+    {
+      "id": "6130c1bece62e79e282a8a3c",
+      "isSelected": false,
+      "operation": "TSUNAMIA",
+      "scope": "A/B/C",
+      "timestamp": "2014-06-21T11:07:22 -03:00",
+      "status": "Failed"
+    },
+    {
+      "id": "6130c1be1026f100bcfcc031",
+      "isSelected": false,
+      "operation": "CENTREGY",
+      "scope": "A/B/C",
+      "timestamp": "2016-10-22T01:34:37 -03:00",
+      "status": "Failed"
+    },
+    {
+      "id": "6130c1bec8fe96ad4385fcfb",
+      "isSelected": false,
+      "operation": "EXOSPACE",
+      "scope": "A/B/C",
+      "timestamp": "2021-02-09T03:37:21 -02:00",
+      "status": "Finished"
+    },
+    {
+      "id": "6130c1bece4c235273936702",
+      "isSelected": false,
+      "operation": "ZYTRAC",
+      "scope": "C/B/A",
+      "timestamp": "2016-03-10T07:29:49 -02:00",
+      "status": "Finished"
+    }
+  ]
+}

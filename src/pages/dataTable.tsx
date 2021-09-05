@@ -1,10 +1,4 @@
 import React, { useState, useEffect } from "react";
-import {
-  DataGrid,
-  GridColDef,
-  GridValueGetterParams
-} from "@material-ui/data-grid";
-
 import Table from "@material-ui/core/Table";
 import TableBody from "@material-ui/core/TableBody";
 import TableCell from "@material-ui/core/TableCell";
@@ -14,106 +8,14 @@ import TableRow from "@material-ui/core/TableRow";
 import Paper from "@material-ui/core/Paper";
 import { makeStyles } from "@material-ui/core/styles";
 import Checkbox from "@material-ui/core/Checkbox";
-import Icon from "@material-ui/core/Icon";
-import CancelIcon from "@material-ui/icons/Cancel";
-import { red, green } from "@material-ui/core/colors";
-import CheckCircleIcon from "@material-ui/icons/CheckCircle";
-import PauseCircleOutlineIcon from "@material-ui/icons/PauseCircleOutline";
-
-const columns: GridColDef[] = [
-  { field: "operation", headerName: "Operation" },
-  {
-    field: "scope",
-    headerName: "Scope"
-  },
-  {
-    field: "timestamp",
-    headerName: "Timestamp"
-  },
-  {
-    field: "status",
-    headerName: "Status"
-  }
-  //   {
-  //     field: "fullName",
-  //     headerName: "Full name",
-  //     description: "This column has a value getter and is not sortable.",
-  //     sortable: false,
-  //     width: 160,
-  //     valueGetter: (params: GridValueGetterParams) =>
-  //       `${params.getValue(params.id, "firstName") || ""} ${params.getValue(
-  //         params.id,
-  //         "lastName"
-  //       ) || ""}`
-  //   }
-];
-
-const rows = [
-  {
-    id: "6130c1be259df2fa0e7d32ee",
-    isSelected: true,
-    operation: "BITREX",
-    scope: "A/B/C",
-    timestamp: "2016-06-30T05:32:46 -03:00",
-    status: "Interreupted"
-  },
-  {
-    id: "6130c1becdeecbcbfad80dbc",
-    isSelected: false,
-    operation: "ZBOO",
-    scope: "A/B/C",
-    timestamp: "2016-11-18T12:31:15 -02:00",
-    status: "Failed"
-  },
-  {
-    id: "6130c1be60951693dec1f06e",
-    isSelected: true,
-    operation: "SONIQUE",
-    scope: "A/B/C",
-    timestamp: "2019-09-20T04:14:44 -03:00",
-    status: "Failed"
-  },
-  {
-    id: "6130c1be2d6ec745d793dcd9",
-    isSelected: true,
-    operation: "TRASOLA",
-    scope: "A/B/C",
-    timestamp: "2018-04-22T06:20:08 -03:00",
-    status: "Interreupted"
-  },
-  {
-    id: "6130c1bece62e79e282a8a3c",
-    isSelected: false,
-    operation: "TSUNAMIA",
-    scope: "A/B/C",
-    timestamp: "2014-06-21T11:07:22 -03:00",
-    status: "Failed"
-  },
-  {
-    id: "6130c1be1026f100bcfcc031",
-    isSelected: true,
-    operation: "CENTREGY",
-    scope: "A/B/C",
-    timestamp: "2016-10-22T01:34:37 -03:00",
-    status: "Failed"
-  },
-  {
-    id: "6130c1bec8fe96ad4385fcfb",
-    isSelected: false,
-    operation: "EXOSPACE",
-    scope: "A/B/C",
-    timestamp: "2021-02-09T03:37:21 -02:00",
-    status: "Finished"
-  },
-  {
-    id: "6130c1bece4c235273936702",
-    isSelected: true,
-    operation: "ZYTRAC",
-    scope: "C/B/A",
-    timestamp: "2016-03-10T07:29:49 -02:00",
-    status: "Finished"
-  }
-];
+import LinearProgress from "@material-ui/core/LinearProgress";
+import Switch from "@material-ui/core/Switch";
+import FormControlLabel from "@material-ui/core/FormControlLabel";
+import { getInitialLoadData, getAutoRefreshLoadData } from "../model/API";
+import { Data } from "../config/dataTypes";
+import TaskStatus from "../components/taskStatus";
+import i18n from "../config/i18n";
+import EnhancedTableToolbar from "../components/tableToolbar";
 
 const useStyles = makeStyles({
   table: {
@@ -124,43 +26,84 @@ const useStyles = makeStyles({
   }
 });
 
-interface Data {
-  id: string;
-  isSelected: boolean;
-  operation: string;
-  scope: string;
-  timestamp: string;
-  status: string;
-}
-
 export default function DataTable() {
   const classes = useStyles();
   const [tableRows, setTableRows] = useState<Data[]>([]);
+  const [loading, setLoading] = useState<boolean>(false);
+  const [autoRefresh, setAutoRefresh] = useState<boolean>(false);
+  const [selectedRows, setSelectedRows] = useState<Data[]>([]);
 
-  const handleChange = (
+  var timer: ReturnType<typeof setInterval>;
+
+  const handleChange = async (
     event: React.ChangeEvent<HTMLInputElement>,
     id: String
   ) => {
-    setTableRows(
-      tableRows.map(x =>
-        x.id === id ? { ...x, isSelected: event.target.checked } : x
-      )
+    const updateIsSelectedArray = await tableRows.map(x =>
+      x.id === id ? { ...x, isSelected: event.target.checked } : x
     );
+    setTableRows(updateIsSelectedArray);
+    setSelectedRowsArray(updateIsSelectedArray);
   };
 
+  const getCompanyInformation = async () => {
+    setLoading(true);
+    const apiData: Data[] = (await getInitialLoadData()) || [];
+    setTableRows(apiData);
+    setLoading(false);
+  };
+
+  const getAutoRefreshData = async () => {
+    setLoading(true);
+    const apiData: Data[] = (await getAutoRefreshLoadData()) || [];
+    setTableRows(apiData);
+    setLoading(false);
+    return true;
+  };
   useEffect(() => {
-    setTableRows(rows);
+    getCompanyInformation();
   }, []);
-  useEffect(() => {}, [tableRows]);
+
+  const handleChangeAutoRefresh = (
+    event: React.ChangeEvent<HTMLInputElement>
+  ) => {
+    setAutoRefresh(event.target.checked);
+    console.log("START!");
+    const limitedInterval = setInterval(() => {
+      if (event.target.checked) {
+        getAutoRefreshData();
+      } else if (!event.target.checked) {
+        console.log("End!");
+        clearInterval(limitedInterval);
+      }
+    }, 3000);
+  };
+
+  const handleSelectAllClick = async (
+    event: React.ChangeEvent<HTMLInputElement>
+  ) => {
+    const updateIsSelectedArray = await tableRows.map(v => ({
+      ...v,
+      isSelected: event.target.checked
+    }));
+    await setTableRows(updateIsSelectedArray);
+    await setSelectedRowsArray(updateIsSelectedArray);
+  };
+
+  const setSelectedRowsArray = async (tableData: Data[]) => {
+    const updateIsSelectedArray = await tableData.filter(
+      o => o.isSelected === true
+    );
+    await setSelectedRows(updateIsSelectedArray);
+    await setSelectedRows(updateIsSelectedArray);
+  };
+
+  useEffect(() => {}, [tableRows, selectedRows]);
+
   return (
     <div style={{ width: "100%" }}>
-      {/* <DataGrid
-        rows={rows}
-        columns={columns}
-        pageSize={5}
-        checkboxSelection
-        disableSelectionOnClick
-      /> */}
+      <EnhancedTableToolbar tableRows={selectedRows} />
+
       <TableContainer component={Paper}>
         <Table
           className={classes.table}
@@ -169,37 +112,66 @@ export default function DataTable() {
         >
           <TableHead>
             <TableRow>
-              <TableCell colSpan={4}>Auto refresh</TableCell>
+              <TableCell colSpan={5}>
+                <FormControlLabel
+                  control={
+                    <Switch
+                      checked={autoRefresh}
+                      onChange={handleChangeAutoRefresh}
+                      name="gilad"
+                    />
+                  }
+                  label={i18n.t("Auto refresh")}
+                />
+              </TableCell>
             </TableRow>
+            {loading && (
+              <TableRow>
+                <TableCell colSpan={5}>
+                  {" "}
+                  <LinearProgress />
+                </TableCell>
+              </TableRow>
+            )}
             <TableRow className={classes.tblHeader}>
-              <TableCell>Operation</TableCell>
-              <TableCell>Scope</TableCell>
-              <TableCell>Timestamp</TableCell>
-              <TableCell>Status</TableCell>
+              <TableCell>
+                {" "}
+                <Checkbox
+                  indeterminate={
+                    selectedRows.length > 0 &&
+                    selectedRows.length < tableRows.length
+                  }
+                  checked={
+                    tableRows.length > 0 &&
+                    selectedRows.length === tableRows.length
+                  }
+                  onChange={handleSelectAllClick}
+                  inputProps={{ "aria-label": "select all record" }}
+                />
+              </TableCell>
+              <TableCell>{i18n.t("Operation")}</TableCell>
+              <TableCell>{i18n.t("Scope")}</TableCell>
+              <TableCell>{i18n.t("Timestamp")}</TableCell>
+              <TableCell>{i18n.t("Status")}</TableCell>
             </TableRow>
           </TableHead>
           <TableBody>
-            {tableRows.map(row => (
-              <TableRow key={row.id}>
+            {tableRows.map((row, index) => (
+              <TableRow key={index}>
                 <TableCell component="th" scope="row">
                   <Checkbox
                     checked={row.isSelected}
                     onChange={event => handleChange(event, row.id)}
                     inputProps={{ "aria-label": "primary checkbox" }}
                   />{" "}
-                  &nbsp;
+                </TableCell>
+                <TableCell component="th" scope="row">
                   {row.operation}
                 </TableCell>
                 <TableCell>{row.scope}</TableCell>
                 <TableCell>{row.timestamp}</TableCell>
                 <TableCell>
-                  <CancelIcon style={{ color: red[500] }}></CancelIcon>
-                  <CheckCircleIcon
-                    style={{ color: green[500] }}
-                  ></CheckCircleIcon>
-                  <PauseCircleOutlineIcon></PauseCircleOutlineIcon>
-
-                  {row.status}
+                  <TaskStatus taskStatus={row.status}></TaskStatus>
                 </TableCell>
               </TableRow>
             ))}
