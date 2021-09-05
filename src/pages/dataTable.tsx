@@ -16,6 +16,7 @@ import { Data } from "../config/dataTypes";
 import TaskStatus from "../components/taskStatus";
 import i18n from "../config/i18n";
 import EnhancedTableToolbar from "../components/tableToolbar";
+import AutoCompleteSearch from "../components/autoCompleteSearch";
 
 const useStyles = makeStyles({
   table: {
@@ -32,6 +33,7 @@ export default function DataTable() {
   const [loading, setLoading] = useState<boolean>(false);
   const [autoRefresh, setAutoRefresh] = useState<boolean>(false);
   const [selectedRows, setSelectedRows] = useState<Data[]>([]);
+  const [originalData, setOriginalData] = useState<Data[]>([]);
 
   var timer: ReturnType<typeof setInterval>;
 
@@ -50,6 +52,7 @@ export default function DataTable() {
     setLoading(true);
     const apiData: Data[] = (await getInitialLoadData()) || [];
     setTableRows(apiData);
+    setOriginalData(apiData);
     setLoading(false);
   };
 
@@ -100,6 +103,15 @@ export default function DataTable() {
 
   useEffect(() => {}, [tableRows, selectedRows]);
 
+  const searchFromArray = async (searchValue: string) => {
+    const search = new RegExp(searchValue, "i"); // prepare a regex object
+    const searchResult = await originalData.filter(task =>
+      search.test(task.operation)
+    );
+    console.log(searchResult, searchValue);
+    await setTableRows(searchResult);
+  };
+
   return (
     <div style={{ width: "100%" }}>
       <EnhancedTableToolbar tableRows={selectedRows} />
@@ -112,7 +124,7 @@ export default function DataTable() {
         >
           <TableHead>
             <TableRow>
-              <TableCell colSpan={5}>
+              <TableCell colSpan={2}>
                 <FormControlLabel
                   control={
                     <Switch
@@ -123,6 +135,12 @@ export default function DataTable() {
                   }
                   label={i18n.t("Auto refresh")}
                 />
+              </TableCell>
+              <TableCell colSpan={3}>
+                <AutoCompleteSearch
+                  tableRows={tableRows}
+                  searchFromArray={searchFromArray}
+                ></AutoCompleteSearch>
               </TableCell>
             </TableRow>
             {loading && (
