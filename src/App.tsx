@@ -1,24 +1,30 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import AppBar from "@material-ui/core/AppBar";
 import Box from "@material-ui/core/Box";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
-import { makeStyles } from "@material-ui/core/styles";
 import Container from "@material-ui/core/Container";
 import DataTable from "./pages/dataTable";
+import ViewTicket from "./pages/viewTicket";
+
 import i18n from "../src/config/i18n";
 import Select from "@material-ui/core/Select";
 import Footer from "./pages/footer";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Redirect
+} from "react-router-dom";
 
-export default function Album() {
-  const [lng, setLng] = useState<string>("FI");
+export default function App() {
+  //set the language from dropdown
   const handleLanguageChange = (
     event: React.ChangeEvent<{ value: unknown }>
   ) => {
-    const l = event.target.value as string;
-    setLng(l);
-    i18n.changeLanguage(l);
+    const language = event.target.value as string;
+    i18n.changeLanguage(language);
   };
 
   return (
@@ -32,6 +38,7 @@ export default function Album() {
               {i18n.t("NOKIA")}
             </Typography>
           </Box>
+          {/* language dropdown  */}
           <Select
             native
             onChange={handleLanguageChange}
@@ -42,17 +49,35 @@ export default function Album() {
             <option value="FI">{i18n.t("drop-down-suomi")}</option>
             <option value="GB">{i18n.t("drop-down-english")}</option>
           </Select>{" "}
-          *
         </Toolbar>
       </AppBar>
       <main>
         <Container>
-          <DataTable></DataTable>
+          {/* routing component,load routing page here  */}
+          <RoutingComponent />
         </Container>
       </main>
       {/* Footer */}
       <Footer></Footer>
       {/* End footer */}
     </React.Fragment>
+  );
+}
+
+{
+  /* routing component,where we define the routing path  */
+}
+function RoutingComponent() {
+  return (
+    <Router>
+      <div>
+        <Switch>
+          <Route exact path="/dashboard" component={DataTable} />
+          <Route exact path="/ticket/:ticketId?" component={ViewTicket} />
+          <Redirect exact from="/" to="/dashboard" />
+          {/* <Route component={NotFound} exact path="*" /> */}
+        </Switch>
+      </div>
+    </Router>
   );
 }

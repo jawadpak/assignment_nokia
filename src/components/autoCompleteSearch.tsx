@@ -2,15 +2,16 @@
 import React from "react";
 import TextField from "@material-ui/core/TextField";
 import Autocomplete from "@material-ui/lab/Autocomplete";
-import { Data } from "./../config/dataTypes";
+import { TicketDataType } from "./../config/dataTypes";
+import i18n from "../config/i18n";
 
 interface AutoCompleteSearchProps {
-  tableRows: Data[];
+  tableRows: TicketDataType[];
   searchFromArray: (value: string) => void;
 }
 
 export default function AutoCompleteSearch(props: AutoCompleteSearchProps) {
-  const [value, setValue] = React.useState<Data | null>(null);
+  // const [value, setValue] = React.useState<TicketDataType | null>(null);
 
   return (
     <Autocomplete
@@ -18,7 +19,7 @@ export default function AutoCompleteSearch(props: AutoCompleteSearchProps) {
       options={props.tableRows}
       getOptionLabel={option => option.operation}
       style={{ width: 300 }}
-      onChange={(event: any, newValue: Data | null) => {
+      onChange={(event: any, newValue: TicketDataType | null) => {
         //setValue(newValue);
         if (newValue) {
           props.searchFromArray(newValue.operation);
@@ -31,9 +32,12 @@ export default function AutoCompleteSearch(props: AutoCompleteSearchProps) {
           props.searchFromArray("");
         }
       }}
-      value={value}
       renderInput={params => (
-        <TextField {...params} label="Search Auto Ticket" variant="outlined" />
+        <TextField
+          {...params}
+          label={i18n.t("Search Auto Ticket")}
+          variant="outlined"
+        />
       )}
     />
   );

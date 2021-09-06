@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import clsx from "clsx";
 import {
   createStyles,
@@ -6,18 +6,17 @@ import {
   makeStyles,
   Theme
 } from "@material-ui/core/styles";
-
 import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
 import IconButton from "@material-ui/core/IconButton";
 import Tooltip from "@material-ui/core/Tooltip";
 import DeleteIcon from "@material-ui/icons/Delete";
 import FilterListIcon from "@material-ui/icons/FilterList";
-import { Data } from "./../config/dataTypes";
+import { TicketDataType } from "./../config/dataTypes";
 import i18n from "../config/i18n";
 
 interface EnhancedTableToolbarProps {
-  tableRows: Data[];
+  tableRows: TicketDataType[];
 }
 const useToolbarStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -66,7 +65,7 @@ const EnhancedTableToolbar = (props: EnhancedTableToolbarProps) => {
           id="tableTitle"
           component="div"
         >
-          {i18n.t("nokia-ticket")}
+          {i18n.t("nokia-tickets")}
         </Typography>
       )}
       {props.tableRows.length > 0 ? (

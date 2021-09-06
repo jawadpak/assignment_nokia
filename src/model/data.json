@@ -1,212 +1,828 @@
 {
   "data": [
     {
-      "id": "6130c1be259df2fa0e7d32ee",
+      "id": "6135f46438713d2db11f0ace",
       "isSelected": false,
-      "operation": "BITREX",
+      "operation": "APEXIA",
       "scope": "A/B/C",
-      "timestamp": "2016-06-30T05:32:46 -03:00",
+      "timestamp": "2020-12-31 T07:41:23",
+      "status": "Failed"
+    },
+    {
+      "id": "6135f4641cfc33ab3d865c1a",
+      "isSelected": false,
+      "operation": "VICON",
+      "scope": "B/A/C",
+      "timestamp": "2020-01-02 T08:46:23",
       "status": "Interrupted"
     },
     {
-      "id": "6130c1becdeecbcbfad80dbc",
+      "id": "6135f4649f57eb4cc9e3c548",
       "isSelected": false,
-      "operation": "ZBOO",
-      "scope": "A/B/C",
-      "timestamp": "2016-11-18T12:31:15 -02:00",
-      "status": "Failed"
-    },
-    {
-      "id": "6130c1be60951693dec1f06e",
-      "isSelected": false,
-      "operation": "SONIQUE",
-      "scope": "A/B/C",
-      "timestamp": "2019-09-20T04:14:44 -03:00",
-      "status": "Failed"
-    },
-    {
-      "id": "6130c1be2d6ec745d793dcd9",
-      "isSelected": false,
-      "operation": "TRASOLA",
-      "scope": "A/B/C",
-      "timestamp": "2018-04-22T06:20:08 -03:00",
-      "status": "Interrupted"
-    },
-    {
-      "id": "6130c1bece62e79e282a8a3c",
-      "isSelected": false,
-      "operation": "TSUNAMIA",
-      "scope": "A/B/C",
-      "timestamp": "2014-06-21T11:07:22 -03:00",
-      "status": "Failed"
-    },
-    {
-      "id": "6130c1be1026f100bcfcc031",
-      "isSelected": false,
-      "operation": "CENTREGY",
-      "scope": "A/B/C",
-      "timestamp": "2016-10-22T01:34:37 -03:00",
-      "status": "Failed"
-    },
-    {
-      "id": "6130c1bec8fe96ad4385fcfb",
-      "isSelected": false,
-      "operation": "EXOSPACE",
-      "scope": "A/B/C",
-      "timestamp": "2021-02-09T03:37:21 -02:00",
+      "operation": "ZIALACTIC",
+      "scope": "B/A/C",
+      "timestamp": "2016-05-26 T02:22:52",
       "status": "Finished"
     },
     {
-      "id": "6130c1bece4c235273936702",
+      "id": "6135f4647031715aae9ffd6c",
       "isSelected": false,
-      "operation": "ZYTRAC",
+      "operation": "CONFERIA",
+      "scope": "A/B/C",
+      "timestamp": "2016-01-25 T12:57:20",
+      "status": "Finished"
+    },
+    {
+      "id": "6135f464cf8ebc95968fdfc3",
+      "isSelected": false,
+      "operation": "MARKETOID",
       "scope": "C/B/A",
-      "timestamp": "2016-03-10T07:29:49 -02:00",
-      "status": "Finished"
-    },
-    {
-      "id": "6130c1be60951693dec1f06e",
-      "isSelected": false,
-      "operation": "SONIQUE",
-      "scope": "A/B/C",
-      "timestamp": "2019-09-20T04:14:44 -03:00",
+      "timestamp": "2014-12-22 T10:45:55",
       "status": "Failed"
     },
     {
-      "id": "6130c1be2d6ec745d793dcd9",
+      "id": "6135f464bac4f10d34651be6",
       "isSelected": false,
-      "operation": "TRASOLA",
-      "scope": "A/B/C",
-      "timestamp": "2018-04-22T06:20:08 -03:00",
+      "operation": "ECOSYS",
+      "scope": "C/B/A",
+      "timestamp": "2014-04-08 T09:46:07",
       "status": "Interrupted"
     },
     {
-      "id": "6130c1bece62e79e282a8a3c",
+      "id": "6135f4645b7ea4903edf363d",
       "isSelected": false,
-      "operation": "TSUNAMIA",
-      "scope": "A/B/C",
-      "timestamp": "2014-06-21T11:07:22 -03:00",
-      "status": "Failed"
-    },
-    {
-      "id": "6130c1be1026f100bcfcc031",
-      "isSelected": false,
-      "operation": "CENTREGY",
-      "scope": "A/B/C",
-      "timestamp": "2016-10-22T01:34:37 -03:00",
-      "status": "Failed"
-    },
-    {
-      "id": "6130c1bec8fe96ad4385fcfb",
-      "isSelected": false,
-      "operation": "EXOSPACE",
-      "scope": "A/B/C",
-      "timestamp": "2021-02-09T03:37:21 -02:00",
-      "status": "Finished"
-    },
-    {
-      "id": "6130c1bece4c235273936702",
-      "isSelected": false,
-      "operation": "ZYTRAC",
-      "scope": "C/B/A",
-      "timestamp": "2016-03-10T07:29:49 -02:00",
-      "status": "Finished"
-    },
-    {
-      "id": "6130c1be60951693dec1f06e",
-      "isSelected": false,
-      "operation": "SONIQUE",
-      "scope": "A/B/C",
-      "timestamp": "2019-09-20T04:14:44 -03:00",
-      "status": "Failed"
-    },
-    {
-      "id": "6130c1be2d6ec745d793dcd9",
-      "isSelected": false,
-      "operation": "TRASOLA",
-      "scope": "A/B/C",
-      "timestamp": "2018-04-22T06:20:08 -03:00",
+      "operation": "LYRIA",
+      "scope": "B/A/C",
+      "timestamp": "2020-10-03 T04:53:30",
       "status": "Interrupted"
     },
     {
-      "id": "6130c1bece62e79e282a8a3c",
+      "id": "6135f46493caea47ea7cf545",
       "isSelected": false,
-      "operation": "TSUNAMIA",
-      "scope": "A/B/C",
-      "timestamp": "2014-06-21T11:07:22 -03:00",
-      "status": "Failed"
-    },
-    {
-      "id": "6130c1be1026f100bcfcc031",
-      "isSelected": false,
-      "operation": "CENTREGY",
-      "scope": "A/B/C",
-      "timestamp": "2016-10-22T01:34:37 -03:00",
-      "status": "Failed"
-    },
-    {
-      "id": "6130c1bec8fe96ad4385fcfb",
-      "isSelected": false,
-      "operation": "EXOSPACE",
-      "scope": "A/B/C",
-      "timestamp": "2021-02-09T03:37:21 -02:00",
-      "status": "Finished"
-    },
-    {
-      "id": "6130c1bece4c235273936702",
-      "isSelected": false,
-      "operation": "ZYTRAC",
+      "operation": "ISOTRONIC",
       "scope": "C/B/A",
-      "timestamp": "2016-03-10T07:29:49 -02:00",
-      "status": "Finished"
-    },
-    {
-      "id": "6130c1be60951693dec1f06e",
-      "isSelected": false,
-      "operation": "SONIQUE",
-      "scope": "A/B/C",
-      "timestamp": "2019-09-20T04:14:44 -03:00",
+      "timestamp": "2014-12-10 T05:13:45",
       "status": "Failed"
     },
     {
-      "id": "6130c1be2d6ec745d793dcd9",
+      "id": "6135f464b73e174bf76e0ef8",
       "isSelected": false,
-      "operation": "TRASOLA",
-      "scope": "A/B/C",
-      "timestamp": "2018-04-22T06:20:08 -03:00",
+      "operation": "XURBAN",
+      "scope": "C/B/A",
+      "timestamp": "2017-11-08 T08:44:10",
       "status": "Interrupted"
     },
     {
-      "id": "6130c1bece62e79e282a8a3c",
+      "id": "6135f464206bd6751477ce19",
       "isSelected": false,
-      "operation": "TSUNAMIA",
-      "scope": "A/B/C",
-      "timestamp": "2014-06-21T11:07:22 -03:00",
-      "status": "Failed"
-    },
-    {
-      "id": "6130c1be1026f100bcfcc031",
-      "isSelected": false,
-      "operation": "CENTREGY",
-      "scope": "A/B/C",
-      "timestamp": "2016-10-22T01:34:37 -03:00",
-      "status": "Failed"
-    },
-    {
-      "id": "6130c1bec8fe96ad4385fcfb",
-      "isSelected": false,
-      "operation": "EXOSPACE",
-      "scope": "A/B/C",
-      "timestamp": "2021-02-09T03:37:21 -02:00",
-      "status": "Finished"
-    },
-    {
-      "id": "6130c1bece4c235273936702",
-      "isSelected": false,
-      "operation": "ZYTRAC",
+      "operation": "GEEKOSIS",
       "scope": "C/B/A",
-      "timestamp": "2016-03-10T07:29:49 -02:00",
+      "timestamp": "2020-12-01 T03:24:57",
       "status": "Finished"
+    },
+    {
+      "id": "6135f464449184e43597cc37",
+      "isSelected": false,
+      "operation": "MALATHION",
+      "scope": "B/A/C",
+      "timestamp": "2021-05-26 T12:36:42",
+      "status": "Interrupted"
+    },
+    {
+      "id": "6135f464660103ed23d01096",
+      "isSelected": false,
+      "operation": "APEXTRI",
+      "scope": "B/A/C",
+      "timestamp": "2018-03-09 T09:18:07",
+      "status": "Finished"
+    },
+    {
+      "id": "6135f46494f1ee0aee08d8e0",
+      "isSelected": false,
+      "operation": "ECRATIC",
+      "scope": "C/B/A",
+      "timestamp": "2015-07-23 T09:12:57",
+      "status": "Interrupted"
+    },
+    {
+      "id": "6135f464848cf7ff4388d81d",
+      "isSelected": false,
+      "operation": "CORIANDER",
+      "scope": "A/B/C",
+      "timestamp": "2015-07-27 T10:22:36",
+      "status": "Interrupted"
+    },
+    {
+      "id": "6135f4641d1c30e82e046cdb",
+      "isSelected": false,
+      "operation": "ZEDALIS",
+      "scope": "B/A/C",
+      "timestamp": "2020-05-23 T10:45:26",
+      "status": "Finished"
+    },
+    {
+      "id": "6135f4642435153224067092",
+      "isSelected": false,
+      "operation": "GINKLE",
+      "scope": "B/A/C",
+      "timestamp": "2020-05-30 T09:31:12",
+      "status": "Interrupted"
+    },
+    {
+      "id": "6135f46449cce750c071db54",
+      "isSelected": false,
+      "operation": "PIGZART",
+      "scope": "C/B/A",
+      "timestamp": "2015-06-16 T08:32:43",
+      "status": "Failed"
+    },
+    {
+      "id": "6135f46455728113019979ba",
+      "isSelected": false,
+      "operation": "RECOGNIA",
+      "scope": "C/B/A",
+      "timestamp": "2020-09-04 T07:48:44",
+      "status": "Failed"
+    },
+    {
+      "id": "6135f464224225fa356b1321",
+      "isSelected": false,
+      "operation": "SLOGANAUT",
+      "scope": "A/B/C",
+      "timestamp": "2021-04-05 T11:56:07",
+      "status": "Finished"
+    },
+    {
+      "id": "6135f46445fddd55d1440a06",
+      "isSelected": false,
+      "operation": "DOGSPA",
+      "scope": "C/B/A",
+      "timestamp": "2020-06-02 T06:27:53",
+      "status": "Failed"
+    },
+    {
+      "id": "6135f4646b098bfe9d2cd952",
+      "isSelected": false,
+      "operation": "SURELOGIC",
+      "scope": "B/A/C",
+      "timestamp": "2020-04-16 T12:18:41",
+      "status": "Interrupted"
+    },
+    {
+      "id": "6135f464e5e9be12ae881849",
+      "isSelected": false,
+      "operation": "STRALUM",
+      "scope": "B/A/C",
+      "timestamp": "2018-10-03 T05:27:47",
+      "status": "Failed"
+    },
+    {
+      "id": "6135f4643aed69d56b1008ee",
+      "isSelected": false,
+      "operation": "CHORIZON",
+      "scope": "C/B/A",
+      "timestamp": "2018-07-25 T08:23:50",
+      "status": "Failed"
+    },
+    {
+      "id": "6135f4641966486360d220c3",
+      "isSelected": false,
+      "operation": "UNEEQ",
+      "scope": "C/B/A",
+      "timestamp": "2015-05-17 T03:39:51",
+      "status": "Interrupted"
+    },
+    {
+      "id": "6135f4649e8384cb11df68a7",
+      "isSelected": false,
+      "operation": "ORBAXTER",
+      "scope": "C/B/A",
+      "timestamp": "2018-04-11 T08:13:31",
+      "status": "Failed"
+    },
+    {
+      "id": "6135f464db7c7b5447162d0c",
+      "isSelected": false,
+      "operation": "PASTURIA",
+      "scope": "B/A/C",
+      "timestamp": "2018-07-16 T02:15:57",
+      "status": "Interrupted"
+    },
+    {
+      "id": "6135f4647192f552f5900f4e",
+      "isSelected": false,
+      "operation": "COMVEYER",
+      "scope": "C/B/A",
+      "timestamp": "2015-02-12 T08:58:12",
+      "status": "Failed"
+    },
+    {
+      "id": "6135f4649011db6cfdd61bd3",
+      "isSelected": false,
+      "operation": "COFINE",
+      "scope": "B/A/C",
+      "timestamp": "2017-12-20 T09:12:53",
+      "status": "Failed"
+    },
+    {
+      "id": "6135f46436feb98115f04fc4",
+      "isSelected": false,
+      "operation": "GEOLOGIX",
+      "scope": "A/B/C",
+      "timestamp": "2021-01-11 T08:18:19",
+      "status": "Finished"
+    },
+    {
+      "id": "6135f46404b9af1a4d0d53db",
+      "isSelected": false,
+      "operation": "SNIPS",
+      "scope": "B/A/C",
+      "timestamp": "2016-04-21 T03:21:07",
+      "status": "Failed"
+    },
+    {
+      "id": "6135f464be9b9c231b44c43c",
+      "isSelected": false,
+      "operation": "OATFARM",
+      "scope": "A/B/C",
+      "timestamp": "2018-02-12 T11:45:53",
+      "status": "Failed"
+    },
+    {
+      "id": "6135f46487c3c9c432e219e3",
+      "isSelected": false,
+      "operation": "THREDZ",
+      "scope": "A/B/C",
+      "timestamp": "2018-01-22 T06:12:36",
+      "status": "Finished"
+    },
+    {
+      "id": "6135f46470a5c6965f131242",
+      "isSelected": false,
+      "operation": "REALMO",
+      "scope": "B/A/C",
+      "timestamp": "2015-01-10 T05:04:40",
+      "status": "Interrupted"
+    },
+    {
+      "id": "6135f464408b0e6bfbae6a8b",
+      "isSelected": false,
+      "operation": "GRUPOLI",
+      "scope": "B/A/C",
+      "timestamp": "2014-03-10 T11:37:32",
+      "status": "Finished"
+    },
+    {
+      "id": "6135f464d50a61e0abbbf820",
+      "isSelected": false,
+      "operation": "NEOCENT",
+      "scope": "A/B/C",
+      "timestamp": "2017-08-22 T12:47:47",
+      "status": "Finished"
+    },
+    {
+      "id": "6135f464c4eca5c3332bdab5",
+      "isSelected": false,
+      "operation": "MARQET",
+      "scope": "A/B/C",
+      "timestamp": "2016-07-24 T09:57:31",
+      "status": "Failed"
+    },
+    {
+      "id": "6135f464c776d077f99a9a53",
+      "isSelected": false,
+      "operation": "ISOSURE",
+      "scope": "A/B/C",
+      "timestamp": "2014-08-14 T04:01:44",
+      "status": "Failed"
+    },
+    {
+      "id": "6135f464bcb3d11d35b9cc94",
+      "isSelected": false,
+      "operation": "ENJOLA",
+      "scope": "B/A/C",
+      "timestamp": "2014-09-20 T01:00:19",
+      "status": "Failed"
+    },
+    {
+      "id": "6135f464c07a15e9a9135c4c",
+      "isSelected": false,
+      "operation": "WAAB",
+      "scope": "B/A/C",
+      "timestamp": "2020-02-22 T03:44:14",
+      "status": "Interrupted"
+    },
+    {
+      "id": "6135f4640482fdfe9360920f",
+      "isSelected": false,
+      "operation": "QUARMONY",
+      "scope": "B/A/C",
+      "timestamp": "2015-03-10 T09:29:13",
+      "status": "Interrupted"
+    },
+    {
+      "id": "6135f464d7d0547412a57534",
+      "isSelected": false,
+      "operation": "QUAILCOM",
+      "scope": "B/A/C",
+      "timestamp": "2020-01-11 T05:34:50",
+      "status": "Finished"
+    },
+    {
+      "id": "6135f4640f9ab7b3ea5ba8c1",
+      "isSelected": false,
+      "operation": "INSURON",
+      "scope": "C/B/A",
+      "timestamp": "2017-07-29 T05:41:06",
+      "status": "Failed"
+    },
+    {
+      "id": "6135f4646e7abf1682facb31",
+      "isSelected": false,
+      "operation": "VERBUS",
+      "scope": "C/B/A",
+      "timestamp": "2016-05-27 T08:08:15",
+      "status": "Failed"
+    },
+    {
+      "id": "6135f464509f722c05e807dc",
+      "isSelected": false,
+      "operation": "CYCLONICA",
+      "scope": "C/B/A",
+      "timestamp": "2016-10-30 T11:50:43",
+      "status": "Failed"
+    },
+    {
+      "id": "6135f464788bbbdd8defbe10",
+      "isSelected": false,
+      "operation": "NETUR",
+      "scope": "A/B/C",
+      "timestamp": "2015-07-29 T02:35:11",
+      "status": "Interrupted"
+    },
+    {
+      "id": "6135f4646515e98a16f7bbe2",
+      "isSelected": false,
+      "operation": "ORGANICA",
+      "scope": "C/B/A",
+      "timestamp": "2017-06-10 T11:29:12",
+      "status": "Finished"
+    },
+    {
+      "id": "6135f464d58269a5ba4dff9a",
+      "isSelected": false,
+      "operation": "EQUITAX",
+      "scope": "A/B/C",
+      "timestamp": "2017-02-15 T03:00:57",
+      "status": "Failed"
+    },
+    {
+      "id": "6135f46448b220ba554ad9db",
+      "isSelected": false,
+      "operation": "SPLINX",
+      "scope": "B/A/C",
+      "timestamp": "2014-12-24 T03:37:09",
+      "status": "Finished"
+    },
+    {
+      "id": "6135f464e52875f43cba6f9d",
+      "isSelected": false,
+      "operation": "PYRAMIS",
+      "scope": "A/B/C",
+      "timestamp": "2014-04-13 T12:49:32",
+      "status": "Failed"
+    },
+    {
+      "id": "6135f46492208a815f14af54",
+      "isSelected": false,
+      "operation": "QUILM",
+      "scope": "A/B/C",
+      "timestamp": "2019-10-26 T08:16:11",
+      "status": "Finished"
+    },
+    {
+      "id": "6135f464ee3cb46f13348c8b",
+      "isSelected": false,
+      "operation": "SNORUS",
+      "scope": "A/B/C",
+      "timestamp": "2015-12-20 T01:46:11",
+      "status": "Failed"
+    },
+    {
+      "id": "6135f4645454b71d721f94ff",
+      "isSelected": false,
+      "operation": "DECRATEX",
+      "scope": "C/B/A",
+      "timestamp": "2016-10-12 T11:19:22",
+      "status": "Interrupted"
+    },
+    {
+      "id": "6135f4640383465885646e2c",
+      "isSelected": false,
+      "operation": "IZZBY",
+      "scope": "C/B/A",
+      "timestamp": "2017-10-06 T11:33:47",
+      "status": "Interrupted"
+    },
+    {
+      "id": "6135f464cdc305b3ca67ff1a",
+      "isSelected": false,
+      "operation": "MANGLO",
+      "scope": "B/A/C",
+      "timestamp": "2017-12-03 T06:44:59",
+      "status": "Failed"
+    },
+    {
+      "id": "6135f464367b2620d331b205",
+      "isSelected": false,
+      "operation": "ESCENTA",
+      "scope": "A/B/C",
+      "timestamp": "2017-04-01 T07:15:21",
+      "status": "Finished"
+    },
+    {
+      "id": "6135f46468aef7b161c7454f",
+      "isSelected": false,
+      "operation": "VANTAGE",
+      "scope": "B/A/C",
+      "timestamp": "2019-12-14 T04:21:23",
+      "status": "Interrupted"
+    },
+    {
+      "id": "6135f464b7a0dce6a82ddc04",
+      "isSelected": false,
+      "operation": "COASH",
+      "scope": "C/B/A",
+      "timestamp": "2015-09-16 T06:58:55",
+      "status": "Finished"
+    },
+    {
+      "id": "6135f464e2a79f66d0e092df",
+      "isSelected": false,
+      "operation": "BOSTONIC",
+      "scope": "B/A/C",
+      "timestamp": "2020-03-04 T02:30:14",
+      "status": "Finished"
+    },
+    {
+      "id": "6135f46458a21b12ddf523d3",
+      "isSelected": false,
+      "operation": "MOLTONIC",
+      "scope": "C/B/A",
+      "timestamp": "2019-12-31 T03:39:17",
+      "status": "Failed"
+    },
+    {
+      "id": "6135f4646c42656a7953e3c7",
+      "isSelected": false,
+      "operation": "FUELTON",
+      "scope": "C/B/A",
+      "timestamp": "2014-08-31 T12:30:10",
+      "status": "Finished"
+    },
+    {
+      "id": "6135f464312b38878cad4e73",
+      "isSelected": false,
+      "operation": "CEDWARD",
+      "scope": "B/A/C",
+      "timestamp": "2019-03-16 T07:42:35",
+      "status": "Finished"
+    },
+    {
+      "id": "6135f46411470225c7ad9b15",
+      "isSelected": false,
+      "operation": "NETBOOK",
+      "scope": "B/A/C",
+      "timestamp": "2019-09-27 T08:16:52",
+      "status": "Interrupted"
+    },
+    {
+      "id": "6135f464c576604329388e38",
+      "isSelected": false,
+      "operation": "ENVIRE",
+      "scope": "A/B/C",
+      "timestamp": "2017-03-26 T09:06:27",
+      "status": "Failed"
+    },
+    {
+      "id": "6135f464c27db110c712b55f",
+      "isSelected": false,
+      "operation": "TECHMANIA",
+      "scope": "B/A/C",
+      "timestamp": "2014-02-14 T04:36:30",
+      "status": "Interrupted"
+    },
+    {
+      "id": "6135f46494ee96d6ac3db0d9",
+      "isSelected": false,
+      "operation": "INTERLOO",
+      "scope": "C/B/A",
+      "timestamp": "2018-09-21 T08:30:33",
+      "status": "Finished"
+    },
+    {
+      "id": "6135f4648ebe9dfe9239a3d0",
+      "isSelected": false,
+      "operation": "ECRAZE",
+      "scope": "C/B/A",
+      "timestamp": "2020-02-08 T10:08:05",
+      "status": "Interrupted"
+    },
+    {
+      "id": "6135f4643a3f4c54b1436599",
+      "isSelected": false,
+      "operation": "WRAPTURE",
+      "scope": "B/A/C",
+      "timestamp": "2019-11-07 T02:56:10",
+      "status": "Failed"
+    },
+    {
+      "id": "6135f464c3c06c197f446b7c",
+      "isSelected": false,
+      "operation": "COMTREK",
+      "scope": "A/B/C",
+      "timestamp": "2017-08-23 T04:00:55",
+      "status": "Interrupted"
+    },
+    {
+      "id": "6135f464630d14b2b6df967b",
+      "isSelected": false,
+      "operation": "LIQUICOM",
+      "scope": "A/B/C",
+      "timestamp": "2018-06-21 T11:22:27",
+      "status": "Finished"
+    },
+    {
+      "id": "6135f4641d2665a5067aa6d1",
+      "isSelected": false,
+      "operation": "OVERFORK",
+      "scope": "A/B/C",
+      "timestamp": "2016-12-14 T04:32:31",
+      "status": "Finished"
+    },
+    {
+      "id": "6135f46415393b9e6a918d5e",
+      "isSelected": false,
+      "operation": "GEEKKO",
+      "scope": "C/B/A",
+      "timestamp": "2015-12-14 T04:17:21",
+      "status": "Finished"
+    },
+    {
+      "id": "6135f464d4cda7f740716e81",
+      "isSelected": false,
+      "operation": "CENTREXIN",
+      "scope": "A/B/C",
+      "timestamp": "2018-03-01 T05:51:44",
+      "status": "Finished"
+    },
+    {
+      "id": "6135f464abec3fc55e960480",
+      "isSelected": false,
+      "operation": "EGYPTO",
+      "scope": "C/B/A",
+      "timestamp": "2018-12-07 T03:29:40",
+      "status": "Finished"
+    },
+    {
+      "id": "6135f4640fa06a9ca42c55c8",
+      "isSelected": false,
+      "operation": "PHARMEX",
+      "scope": "A/B/C",
+      "timestamp": "2020-08-09 T12:52:15",
+      "status": "Interrupted"
+    },
+    {
+      "id": "6135f464c49c85ddd1adfce8",
+      "isSelected": false,
+      "operation": "AQUASURE",
+      "scope": "C/B/A",
+      "timestamp": "2018-04-22 T04:02:45",
+      "status": "Finished"
+    },
+    {
+      "id": "6135f4645fc28a24f7c0a7ee",
+      "isSelected": false,
+      "operation": "ESCHOIR",
+      "scope": "B/A/C",
+      "timestamp": "2019-08-07 T03:04:49",
+      "status": "Interrupted"
+    },
+    {
+      "id": "6135f4649c93e70a9ae5a6f2",
+      "isSelected": false,
+      "operation": "TOURMANIA",
+      "scope": "B/A/C",
+      "timestamp": "2018-09-22 T03:46:04",
+      "status": "Failed"
+    },
+    {
+      "id": "6135f4643a82228542461cad",
+      "isSelected": false,
+      "operation": "BUZZOPIA",
+      "scope": "C/B/A",
+      "timestamp": "2020-06-12 T03:40:25",
+      "status": "Failed"
+    },
+    {
+      "id": "6135f464359ec2b13e269731",
+      "isSelected": false,
+      "operation": "MANTRIX",
+      "scope": "B/A/C",
+      "timestamp": "2016-05-13 T03:30:45",
+      "status": "Interrupted"
+    },
+    {
+      "id": "6135f464adaec24e9504154d",
+      "isSelected": false,
+      "operation": "COMTENT",
+      "scope": "C/B/A",
+      "timestamp": "2018-06-10 T03:58:25",
+      "status": "Failed"
+    },
+    {
+      "id": "6135f464b594e5843ec18a0c",
+      "isSelected": false,
+      "operation": "QUIZKA",
+      "scope": "A/B/C",
+      "timestamp": "2021-03-31 T02:26:20",
+      "status": "Finished"
+    },
+    {
+      "id": "6135f464a1b06fee08a3dec6",
+      "isSelected": false,
+      "operation": "COSMETEX",
+      "scope": "A/B/C",
+      "timestamp": "2020-12-16 T12:10:33",
+      "status": "Interrupted"
+    },
+    {
+      "id": "6135f4645ee981c570ca8c70",
+      "isSelected": false,
+      "operation": "VISUALIX",
+      "scope": "B/A/C",
+      "timestamp": "2014-05-27 T06:05:36",
+      "status": "Failed"
+    },
+    {
+      "id": "6135f464fda31234d6c8d663",
+      "isSelected": false,
+      "operation": "STEELFAB",
+      "scope": "A/B/C",
+      "timestamp": "2015-12-04 T02:27:32",
+      "status": "Interrupted"
+    },
+    {
+      "id": "6135f464f75fbe7c3f22a558",
+      "isSelected": false,
+      "operation": "ZAPHIRE",
+      "scope": "A/B/C",
+      "timestamp": "2018-06-12 T07:55:44",
+      "status": "Failed"
+    },
+    {
+      "id": "6135f464e1ff1bbef4f30112",
+      "isSelected": false,
+      "operation": "BOLAX",
+      "scope": "C/B/A",
+      "timestamp": "2016-01-11 T08:10:08",
+      "status": "Finished"
+    },
+    {
+      "id": "6135f4649866ed2ffe07ae0c",
+      "isSelected": false,
+      "operation": "EQUITOX",
+      "scope": "B/A/C",
+      "timestamp": "2015-04-16 T03:30:08",
+      "status": "Failed"
+    },
+    {
+      "id": "6135f4642e9aa769ffa841d0",
+      "isSelected": false,
+      "operation": "HOPELI",
+      "scope": "C/B/A",
+      "timestamp": "2017-09-10 T07:09:02",
+      "status": "Failed"
+    },
+    {
+      "id": "6135f464e4144f02bd8de8b8",
+      "isSelected": false,
+      "operation": "MONDICIL",
+      "scope": "B/A/C",
+      "timestamp": "2015-06-18 T07:47:12",
+      "status": "Finished"
+    },
+    {
+      "id": "6135f464f799ab8ce5421278",
+      "isSelected": false,
+      "operation": "EARWAX",
+      "scope": "A/B/C",
+      "timestamp": "2014-05-13 T08:23:48",
+      "status": "Failed"
+    },
+    {
+      "id": "6135f464f95769bd99888a22",
+      "isSelected": false,
+      "operation": "MICROLUXE",
+      "scope": "B/A/C",
+      "timestamp": "2020-09-25 T12:21:36",
+      "status": "Interrupted"
+    },
+    {
+      "id": "6135f4647c09151d6628b24d",
+      "isSelected": false,
+      "operation": "ZILLIDIUM",
+      "scope": "A/B/C",
+      "timestamp": "2016-01-23 T10:07:25",
+      "status": "Interrupted"
+    },
+    {
+      "id": "6135f464571db4c44d0b9dbb",
+      "isSelected": false,
+      "operation": "NEBULEAN",
+      "scope": "B/A/C",
+      "timestamp": "2020-11-21 T09:40:21",
+      "status": "Interrupted"
+    },
+    {
+      "id": "6135f464e1c21e669a23260f",
+      "isSelected": false,
+      "operation": "KINETICA",
+      "scope": "A/B/C",
+      "timestamp": "2018-04-21 T10:29:54",
+      "status": "Finished"
+    },
+    {
+      "id": "6135f46406ee34311fc00604",
+      "isSelected": false,
+      "operation": "IMANT",
+      "scope": "B/A/C",
+      "timestamp": "2019-01-23 T03:54:20",
+      "status": "Failed"
+    },
+    {
+      "id": "6135f4648092c6dc79b05f5c",
+      "isSelected": false,
+      "operation": "ZANYMAX",
+      "scope": "C/B/A",
+      "timestamp": "2016-12-09 T12:20:24",
+      "status": "Failed"
+    },
+    {
+      "id": "6135f464356a820978e4c5f6",
+      "isSelected": false,
+      "operation": "ISOLOGICS",
+      "scope": "B/A/C",
+      "timestamp": "2017-11-26 T01:48:05",
+      "status": "Finished"
+    },
+    {
+      "id": "6135f4646e016f0df1d73377",
+      "isSelected": false,
+      "operation": "XANIDE",
+      "scope": "B/A/C",
+      "timestamp": "2016-06-14 T11:35:21",
+      "status": "Finished"
+    },
+    {
+      "id": "6135f464adcb85fb0385e7f7",
+      "isSelected": false,
+      "operation": "ZOLAVO",
+      "scope": "C/B/A",
+      "timestamp": "2016-06-21 T10:28:24",
+      "status": "Failed"
+    },
+    {
+      "id": "6135f464c0e6537f556521eb",
+      "isSelected": false,
+      "operation": "ARTIQ",
+      "scope": "B/A/C",
+      "timestamp": "2014-11-25 T05:23:47",
+      "status": "Finished"
+    },
+    {
+      "id": "6135f4649e2e128786bfb02b",
+      "isSelected": false,
+      "operation": "MOTOVATE",
+      "scope": "C/B/A",
+      "timestamp": "2017-04-02 T04:07:27",
+      "status": "Failed"
+    },
+    {
+      "id": "6135f4641d6692839243da6b",
+      "isSelected": false,
+      "operation": "ZORK",
+      "scope": "C/B/A",
+      "timestamp": "2014-07-19 T12:13:17",
+      "status": "Interrupted"
+    },
+    {
+      "id": "6135f46414342fe1b3dd034a",
+      "isSelected": false,
+      "operation": "NETPLODE",
+      "scope": "A/B/C",
+      "timestamp": "2017-09-25 T07:17:11",
+      "status": "Interrupted"
     }
   ]
 }

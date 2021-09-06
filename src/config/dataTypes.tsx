@@ -1,4 +1,4 @@
-export interface Data {
+export interface TicketDataType {
   id: string;
   isSelected: boolean;
   operation: string;
@@ -7,4 +7,4 @@ export interface Data {
   status: string;
 }
 
-type MyBoolean = true | false | null | undefined; // same as boolean
+export const TABLE_NUMBER_ROWS = 30;
