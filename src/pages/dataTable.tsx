@@ -20,6 +20,7 @@ import AutoCompleteSearch from "../components/autoCompleteSearch";
 import TablePagination from "../components/tablePaging";
 import { useHistory } from "react-router-dom";
 import MLink from "@material-ui/core/Link";
+import ToggleAutoRefresh from "../components/toggleAutoRefresh";
 
 const useStyles = makeStyles({
   table: {
@@ -139,7 +140,7 @@ export default function DataTable() {
           <TableHead>
             <TableRow>
               <TableCell colSpan={2}>
-                <FormControlLabel
+                {/* <FormControlLabel
                   control={
                     <Switch
                       checked={autoRefresh}
@@ -150,7 +151,11 @@ export default function DataTable() {
                   }
                   label={i18n.t("Auto refresh")}
                   data-testid="autoRefresh"
-                />
+                /> */}
+                <ToggleAutoRefresh
+                  autoRefresh={autoRefresh}
+                  handleChangeAutoRefresh={handleChangeAutoRefresh}
+                ></ToggleAutoRefresh>
               </TableCell>
               <TableCell colSpan={3}>
                 <AutoCompleteSearch
