@@ -7,7 +7,6 @@ import Typography from "@material-ui/core/Typography";
 import Container from "@material-ui/core/Container";
 import DataTable from "./pages/dataTable";
 import ViewTicket from "./pages/viewTicket";
-
 import i18n from "../src/config/i18n";
 import Select from "@material-ui/core/Select";
 import Footer from "./pages/footer";
@@ -17,8 +16,10 @@ import {
   Route,
   Redirect
 } from "react-router-dom";
+import PageNotFound from "./pages/pageNotFound";
+import { withTranslation } from "react-i18next";
 
-export default function App() {
+function App() {
   //set the language from dropdown
   const handleLanguageChange = (
     event: React.ChangeEvent<{ value: unknown }>
@@ -75,9 +76,10 @@ function RoutingComponent() {
           <Route exact path="/dashboard" component={DataTable} />
           <Route exact path="/ticket/:ticketId?" component={ViewTicket} />
           <Redirect exact from="/" to="/dashboard" />
-          {/* <Route component={NotFound} exact path="*" /> */}
+          <Route component={PageNotFound} exact path="*" />
         </Switch>
       </div>
     </Router>
   );
 }
+export default withTranslation()(App);
