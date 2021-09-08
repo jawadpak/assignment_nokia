@@ -37,29 +37,5 @@ describe("<App />", () => {
 
     const rdAutoRefresh = await documentBody.findByTestId("rdAutoRefresh");
     expect(rdAutoRefresh).toBeEnabled();
-
-    //const handleChangeAutoRefresh = jest.fn();
-    //const wrapper = mount(<App />);
-    //const checkBox = wrapper.find(Checkbox);
-    // This works for react-testing-library@5:
-    //fireEvent.click(autoRefreshLabel);
-    //autoRefreshLabel.click();
-    //expect(autoRefreshLabel.children).toHaveClass("Mui-checked");
-
-    //fireEvent.change(rdAutoRefresh, { target: { value: true } });
-    //fireEvent(autoRefreshLabel, true);
-    //const switchBox = wrapper.find(Switch);
-
-    //expect(switchBox).toHaveLength(1);
-    //expect(switchBox.props().checked).toBe(false);
-
-    //expect(switchBox.props().checked).toBe(true);
-    /*const handleChangeAutoRefresh = jest.fn();
-    expect(rdAutoRefresh).in("type", "checkbox");*/
-    /*const checkboxEl = screen.getByLabelText(
-      "Automaattinen päivitys"
-    ) as HTMLInputElement;
-    expect(checkboxEl).toBeChecked();*/
-    //const checkBox = getByTestId("myTest");
   });
 });
