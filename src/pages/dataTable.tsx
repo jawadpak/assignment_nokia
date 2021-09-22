@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useReducer } from "react";
 import Table from "@material-ui/core/Table";
 import TableBody from "@material-ui/core/TableBody";
 import TableCell from "@material-ui/core/TableCell";
@@ -9,8 +9,7 @@ import Paper from "@material-ui/core/Paper";
 import { makeStyles } from "@material-ui/core/styles";
 import Checkbox from "@material-ui/core/Checkbox";
 import LinearProgress from "@material-ui/core/LinearProgress";
-import Switch from "@material-ui/core/Switch";
-import FormControlLabel from "@material-ui/core/FormControlLabel";
+
 import { getAutoRefreshLoadData, getPageData } from "../model/API";
 import { TicketDataType } from "../config/dataTypes";
 import TaskStatus from "../components/taskStatus";
@@ -21,6 +20,7 @@ import TablePagination from "../components/tablePaging";
 import { useHistory } from "react-router-dom";
 import MLink from "@material-ui/core/Link";
 import ToggleAutoRefresh from "../components/toggleAutoRefresh";
+import { DataReducer, DataState } from "../model/reduceReact";
 
 const useStyles = makeStyles({
   table: {
@@ -30,14 +30,21 @@ const useStyles = makeStyles({
     backgroundColor: "#EEEEEE"
   }
 });
-
 export default function DataTable() {
   const classes = useStyles();
-  const [tableRows, setTableRows] = useState<TicketDataType[]>([]);
   const [loading, setLoading] = useState<boolean>(false);
   const [autoRefresh, setAutoRefresh] = useState<boolean>(false);
-  const [selectedRows, setSelectedRows] = useState<TicketDataType[]>([]);
-  const [originalData, setOriginalData] = useState<TicketDataType[]>([]);
+
+  const initialState: DataState = {
+    data: [],
+    originalData: [],
+    selectFlag: false,
+    findObj: undefined,
+    selectedObjNumber: 0
+  };
+
+  const a = useState<TicketDataType>();
+  const [state, dispatch] = useReducer(DataReducer, initialState);
 
   const history = useHistory();
 
@@ -45,8 +52,6 @@ export default function DataTable() {
   const getAutoRefreshData = async () => {
     setLoading(true);
     const apiData: TicketDataType[] = (await getAutoRefreshLoadData()) || [];
-    setTableRows(apiData);
-    setOriginalData(apiData);
     setLoading(false);
     return true;
   };
@@ -54,8 +59,7 @@ export default function DataTable() {
   const getPagingData = async (pageNo: number) => {
     setLoading(true);
     const apiData: TicketDataType[] = (await getPageData(pageNo)) || [];
-    setTableRows(apiData);
-    setOriginalData(apiData);
+    dispatch({ type: "SET_ARRAY", payload: { data: apiData } });
     setLoading(false);
     return true;
   };
@@ -85,11 +89,13 @@ export default function DataTable() {
     event: React.ChangeEvent<HTMLInputElement>,
     id: String
   ) => {
-    const updateIsSelectedArray = await tableRows.map(x =>
+    const updateIsSelectedArray = await state.data.map(x =>
       x.id === id ? { ...x, isSelected: event.target.checked } : x
     );
-    setTableRows(updateIsSelectedArray);
-    setSelectedRowsArray(updateIsSelectedArray);
+    dispatch({
+      type: "SELECT_ALL_FLAG",
+      payload: { data: updateIsSelectedArray }
+    });
   };
 
   /*call when user click the select all checkbox*/
@@ -97,39 +103,29 @@ export default function DataTable() {
   const handleSelectAllClick = async (
     event: React.ChangeEvent<HTMLInputElement>
   ) => {
-    const updateIsSelectedArray = await tableRows.map(v => ({
+    const updateIsSelectedArray = await state.data.map(v => ({
       ...v,
       isSelected: event.target.checked
     }));
-    await setTableRows(updateIsSelectedArray);
-    await setSelectedRowsArray(updateIsSelectedArray);
+
+    dispatch({
+      type: "SELECT_ALL_FLAG",
+      payload: { data: updateIsSelectedArray }
+    });
   };
-
-  /*filter the operation whose status isSelected is true*/
-
-  const setSelectedRowsArray = async (tableData: TicketDataType[]) => {
-    const updateIsSelectedArray = await tableData.filter(
-      task => task.isSelected === true
-    );
-    await setSelectedRows(updateIsSelectedArray);
-    await setSelectedRows(updateIsSelectedArray);
-  };
-
-  /** just render the component*/
-  useEffect(() => {}, [tableRows, selectedRows]);
 
   /** search from array use for auto complete  */
   const searchFromArray = async (searchValue: string) => {
     const search = new RegExp(searchValue, "i"); // prepare a regex object
-    const searchResult = await originalData.filter(task =>
-      search.test(task.operation)
+    const searchResult = await state.originalData.filter(
+      (task: TicketDataType) => search.test(task.operation)
     );
-    await setTableRows(searchResult);
+    dispatch({ type: "SET_SEARCH_ARRAY", payload: { data: searchResult } });
   };
 
   return (
     <div style={{ width: "100%" }}>
-      <EnhancedTableToolbar tableRows={selectedRows} />
+      <EnhancedTableToolbar tableRows={state.selectedObjNumber} />
 
       <TableContainer component={Paper}>
         <Table
@@ -140,18 +136,6 @@ export default function DataTable() {
           <TableHead>
             <TableRow>
               <TableCell colSpan={2}>
-                {/* <FormControlLabel
-                  control={
-                    <Switch
-                      checked={autoRefresh}
-                      onChange={handleChangeAutoRefresh}
-                      name="rdAutoRefresh"
-                      data-testid="rdAutoRefresh"
-                    />
-                  }
-                  label={i18n.t("Auto refresh")}
-                  data-testid="autoRefresh"
-                /> */}
                 <ToggleAutoRefresh
                   autoRefresh={autoRefresh}
                   handleChangeAutoRefresh={handleChangeAutoRefresh}
@@ -159,7 +143,7 @@ export default function DataTable() {
               </TableCell>
               <TableCell colSpan={3}>
                 <AutoCompleteSearch
-                  tableRows={tableRows}
+                  tableRows={state.data}
                   searchFromArray={searchFromArray}
                 ></AutoCompleteSearch>
               </TableCell>
@@ -185,12 +169,12 @@ export default function DataTable() {
                 {" "}
                 <Checkbox
                   indeterminate={
-                    selectedRows.length > 0 &&
-                    selectedRows.length < tableRows.length
+                    state.selectedObjNumber > 0 &&
+                    state.selectedObjNumber < state.data.length
                   }
                   checked={
-                    tableRows.length > 0 &&
-                    selectedRows.length === tableRows.length
+                    state.data.length > 0 &&
+                    state.selectedObjNumber === state.data.length
                   }
                   onChange={handleSelectAllClick}
                   inputProps={{ "aria-label": "select all record" }}
@@ -203,7 +187,7 @@ export default function DataTable() {
             </TableRow>
           </TableHead>
           <TableBody>
-            {tableRows.map((row, index) => (
+            {state.data.map((row: TicketDataType, index: number) => (
               <TableRow key={index}>
                 <TableCell component="th" scope="row">
                   <Checkbox
@@ -232,10 +216,6 @@ export default function DataTable() {
             ))}
           </TableBody>
         </Table>
-        {/* <TablePagination
-          totalNumber={100}
-          handlePageChange={getPagingData}
-        ></TablePagination> */}
       </TableContainer>
     </div>
   );

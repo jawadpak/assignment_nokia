@@ -12,11 +12,10 @@ import IconButton from "@material-ui/core/IconButton";
 import Tooltip from "@material-ui/core/Tooltip";
 import DeleteIcon from "@material-ui/icons/Delete";
 import FilterListIcon from "@material-ui/icons/FilterList";
-import { TicketDataType } from "./../config/dataTypes";
 import i18n from "../config/i18n";
 
 interface EnhancedTableToolbarProps {
-  tableRows: TicketDataType[];
+  tableRows: number;
 }
 const useToolbarStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -46,17 +45,17 @@ const EnhancedTableToolbar = (props: EnhancedTableToolbarProps) => {
   return (
     <Toolbar
       className={clsx(classes.root, {
-        [classes.highlight]: props.tableRows.length > 0
+        [classes.highlight]: props.tableRows > 0
       })}
     >
-      {props.tableRows.length > 0 ? (
+      {props.tableRows > 0 ? (
         <Typography
           className={classes.title}
           color="inherit"
           variant="subtitle1"
           component="div"
         >
-          {props.tableRows.length} {i18n.t("selected")}
+          {props.tableRows} {i18n.t("selected")}
         </Typography>
       ) : (
         <Typography
@@ -68,7 +67,7 @@ const EnhancedTableToolbar = (props: EnhancedTableToolbarProps) => {
           {i18n.t("nokia-tickets")}
         </Typography>
       )}
-      {props.tableRows.length > 0 ? (
+      {props.tableRows > 0 ? (
         <Tooltip title="Delete">
           <IconButton aria-label="delete">
             <DeleteIcon />
