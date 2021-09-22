@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useReducer } from "react";
+import React, { useState, useEffect, useReducer, useMemo } from "react";
 import Table from "@material-ui/core/Table";
 import TableBody from "@material-ui/core/TableBody";
 import TableCell from "@material-ui/core/TableCell";
@@ -21,6 +21,8 @@ import { useHistory } from "react-router-dom";
 import MLink from "@material-ui/core/Link";
 import ToggleAutoRefresh from "../components/toggleAutoRefresh";
 import { DataReducer, DataState } from "../model/reduceReact";
+
+import Button from "@material-ui/core/Button";
 
 const useStyles = makeStyles({
   table: {
@@ -122,10 +124,27 @@ export default function DataTable() {
     );
     dispatch({ type: "SET_SEARCH_ARRAY", payload: { data: searchResult } });
   };
+  //example how use useMemo in react
+  const [number, setNumber] = useState(1);
+  const changeNumber = (val: number) => {
+    setNumber(val);
+  };
 
+  const sumDoubleNumber = (val: number) => val + val;
+  const sumResult = useMemo(() => sumDoubleNumber(number), [number]);
+  ///
   return (
     <div style={{ width: "100%" }}>
       <EnhancedTableToolbar tableRows={state.selectedObjNumber} />
+
+      <Button variant="text" onClick={() => changeNumber(2)}>
+        Add 2
+      </Button>
+      <Button variant="text" onClick={() => changeNumber(3)}>
+        Add 3
+      </Button>
+
+      <span>{sumResult}</span>
 
       <TableContainer component={Paper}>
         <Table
